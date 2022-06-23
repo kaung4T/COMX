@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'aep-icons';
+  src:
+    url('fonts/aep-icons.ttf?iimfum') format('truetype'),
+    url('fonts/aep-icons.woff?iimfum') format('woff'),
+    url('fonts/aep-icons.svg?iimfum#aep-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="aep-"], [class*=" aep-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'aep-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.aep-sg-6:before {
+  content: "\e902";
+  color: #d8d8d8;
+}
+.aep-sg-5:before {
+  content: "\e903";
+  color: #d8d8d8;
+}
+.aep-sg-4:before {
+  content: "\e904";
+  color: #d8d8d8;
+}
+.aep-sg-3:before {
+  content: "\e905";
+  color: #d8d8d8;
+}
+.aep-sg-2:before {
+  content: "\e900";
+  color: #d8d8d8;
+}
+.aep-sg-1:before {
+  content: "\e901";
+  color: #d8d8d8;
+}

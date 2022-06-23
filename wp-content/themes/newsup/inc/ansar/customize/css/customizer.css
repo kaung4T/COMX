@@ -1,0 +1,426 @@
+/* ==========================================================================
+   CSS for Customizer Custom Controls
+   ========================================================================== */
+li.customize-control-section-title {
+	background-color: #e2e2e2;
+	padding: 0 10px;
+	margin-top: 15px;
+}
+
+li.customize-control-section-title h3{
+	color: #707070;
+
+}
+
+.customize-control select,
+.select2-container--default .selection .select2-selection--single {
+	border: none;
+	background: #fcfcff;
+	position: relative;
+	border-radius: 0;
+	height: 27px;
+	line-height: 27px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.wp-customizer .select2-container--default .selection .select2-selection--multiple {
+	border: none;
+	background: #fcfcff;
+	border-radius: 0;
+	height: auto;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.wp-customizer .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+	width: 95%;
+}
+
+.wp-customizer .select2-container--default .select2-selection--multiple .select2-selection__clear {
+	position: absolute;
+	right: 0;
+}
+
+.wp-customizer .select2-container .select2-dropdown {
+	z-index: 900000;
+}
+
+.customize-control select:active,
+.customize-control select:focus {
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="url"],
+input[type="email"],
+input[type="date"] {
+	background: #fcfcff;
+	position: relative;
+	border-radius: 0;
+	border: 1px solid #eee;
+	height: 27px;
+	line-height: 27px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus,
+input[type="number"]:active,
+input[type="number"]:focus {
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.simple-notice-custom-control .customize-control-description {
+	line-height: 1.6
+}
+
+.simple-notice-custom-control code {
+	font-size: 90%;
+	padding: 2px 4px;
+}
+.tinymce-control textarea {
+	width: 100%;
+	padding: 10px;
+}
+
+.text_radio_button_control:after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+.text_radio_button_control .radio-buttons {
+	display: inline-block;
+	border: 1px solid #f9f9fe;
+}
+.text_radio_button_control .radio-button-label {
+	cursor: pointer;
+	float: left;
+}
+.text_radio_button_control .radio-button-label > input {
+	display: none;
+}
+.text_radio_button_control .radio-button-label span {
+	cursor: pointer;
+	font-weight: 500;
+	border: 2px solid #f9f9fe;
+	margin: 0;
+	background-color: #eee;
+	padding: 5px 15px;
+	display: inline-block;
+}
+.text_radio_button_control .radio-button-label span:hover {
+	background-color: rgba(255, 255, 255, .2);
+	color: #2885bb;
+}
+.text_radio_button_control .radio-button-label > input:checked + span {
+	background-color: #2084bd;
+	color: #fff;
+}
+.text_radio_button_control .radio-button-label > input:checked + span:hover {
+	color: #fff;
+}
+
+.image_radio_button_control .radio-button-label > input {
+	display: none;
+}
+.image_radio_button_control .radio-button-label > img {
+	cursor: pointer;
+	border: 3px solid #ddd;
+}
+.image_radio_button_control .radio-button-label > input:checked + img {
+	border: 3px solid #2885bb;
+}
+
+.image_checkbox_control .checkbox-label > input {
+	display: none;
+}
+.image_checkbox_control .checkbox-label > img {
+	cursor: pointer;
+	border: 3px solid #ddd;
+}
+.image_checkbox_control .checkbox-label > input:checked + img {
+	border: 3px solid #2885bb;
+}
+
+.slider-custom-control {
+	margin-bottom: 30px;
+}
+.slider-custom-control input[type=number]::-webkit-inner-spin-button,
+.slider-custom-control input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.slider-custom-control input[type=number] {
+	-moz-appearance: textfield;
+}
+.slider-custom-control  .customize-control-title {
+	display: inline-block;
+}
+.slider-custom-control input[type=number] {
+	text-align: right;
+	width: 50px;
+	float: right;
+}
+.slider-custom-control .slider {
+	width: 85%;
+	float: left;
+	margin: 20px 0 10px;
+}
+.slider-custom-control .slider-reset {
+	float: right;
+	cursor: pointer;
+}
+.slider-custom-control .slider-value {
+	border: none;
+	text-align: right;
+	width: 50px;
+	margin-right: 5px;
+}
+.slider-custom-control .slider-value,
+.slider-custom-control .slider-unit {
+	float: right;
+}
+.slider-custom-control .ui-widget.ui-widget-content {
+	border: 1px solid #f4f4f4;
+}
+.slider-custom-control .ui-corner-all,
+.slider-custom-control .ui-corner-bottom,
+.slider-custom-control .ui-corner-right,
+.slider-custom-control .ui-corner-br {
+	border-bottom-right-radius: 3px;
+}
+.slider-custom-control .ui-corner-all,
+.slider-custom-control .ui-corner-bottom,
+.slider-custom-control .ui-corner-left,
+.slider-custom-control .ui-corner-bl {
+	border-bottom-left-radius: 3px;
+}
+.slider-custom-control .ui-corner-all,
+.slider-custom-control .ui-corner-top,
+.slider-custom-control .ui-corner-right,
+.slider-custom-control .ui-corner-tr {
+	border-top-right-radius: 3px;
+}
+.slider-custom-control .ui-corner-all,
+.slider-custom-control .ui-corner-top,
+.slider-custom-control .ui-corner-left,
+.slider-custom-control .ui-corner-tl {
+	border-top-left-radius: 3px;
+}
+.slider-custom-control .ui-widget-content {
+	background: #f4f4f4 none repeat scroll 0 0;
+	color: #333;
+}
+.slider-custom-control .ui-slider-horizontal {
+	height: 3px;
+}
+.slider-custom-control .ui-slider {
+	position: relative;
+	text-align: left;
+}
+.slider-custom-control .ui-state-default,
+.slider-custom-control .ui-widget-content .ui-state-default,
+.slider-custom-control .ui-widget-header .ui-state-default,
+.slider-custom-control .ui-button,
+.slider-custom-control .ui-button.ui-state-disabled:hover,
+.slider-custom-control .ui-button.ui-state-disabled:active {
+	background: #2885bb none repeat scroll 0 0;
+	border: 1px solid #2885bb;
+	color: #454545;
+	font-weight: normal;
+}
+.slider-custom-control .ui-slider-horizontal .ui-slider-handle {
+	margin-left: -7px;
+	top: -7px;
+	border-radius: 50%;
+}
+.slider-custom-control .ui-slider .ui-slider-handle {
+	cursor: pointer;
+	height: 14px;
+	position: absolute;
+	width: 14px;
+	z-index: 2;
+}
+.slider-custom-control .dashicons-image-rotate {
+	margin-top: 10px;
+	color: #d4d4d4;
+	size: 16px;
+}
+.slider-custom-control .dashicons-image-rotate:hover {
+	color: #a7a7a7;
+}
+/* ==========================================================================
+   Toggle Switch
+   ========================================================================== */
+.toggle-switch-control .customize-control-title {
+	display: inline-block;
+}
+
+.toggle-switch {
+	position: relative;
+	width: 64px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	float: right;
+}
+
+.toggle-switch .toggle-switch-checkbox {
+	display: none;
+}
+
+.toggle-switch .toggle-switch-label {
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	border: 2px solid #ddd;
+	border-radius: 20px;
+	padding: 0;
+	margin: 0;
+}
+
+.toggle-switch-inner {
+	display: block;
+	width: 200%;
+	margin-left: -100%;
+	transition: margin 0.3s ease-in 0s;
+}
+
+.toggle-switch-inner:before,
+.toggle-switch-inner:after {
+	display: block;
+	float: left;
+	width: 50%;
+	height: 22px;
+	padding: 0;
+	line-height: 22px;
+	font-size: 14px;
+	color: white;
+	font-family: Trebuchet, Arial, sans-serif;
+	font-weight: bold;
+	box-sizing: border-box;
+}
+
+.toggle-switch-inner:before {
+	content: "ON";
+	padding-left: 8px;
+	background-color: #2885bb;
+	color: #FFFFFF;
+}
+
+.toggle-switch-inner:after {
+	content: "OFF";
+	padding-right: 8px;
+	background-color: #EEEEEE;
+	color: #999999;
+	text-align: right;
+}
+
+.toggle-switch-switch {
+	display: block;
+	width: 16px;
+	margin: 3px;
+	background: #FFFFFF;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 38px;
+	border: 2px solid #ddd;
+	border-radius: 20px;
+	transition: all 0.3s ease-in 0s;
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
+	margin-left: 0;
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+	right: 0px;
+}
+
+/* ==========================================================================
+   Single Accordion
+   ========================================================================== */
+.single-accordion-toggle {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 24px;
+	padding: 10px 5px 5px 0;
+	cursor: pointer;
+}
+.accordion-icon-toggle {
+	font-size: 18px;
+	margin-left: 5px;
+	margin-top: 5px;
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	-moz-transition: -moz-transform 0.3s ease-in-out;
+	-o-transition: -o-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
+}
+.single-accordion-toggle-rotate .accordion-icon-toggle {
+	filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=-0.5);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	display: inline-block;
+}
+.single-accordion {
+	display: none;
+}
+.single-accordion ul {
+	margin: 0;
+	padding: 0;
+}
+.single-accordion li {
+	background-color: #e4e4e4;
+	color: #888;
+	width: 115px;
+	display: inline-block;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+}
+.single-accordion li i {
+	margin-left: 5px;
+}
+
+
+.customize-control-newsup_content_layout .image-select + label {
+    position: relative;
+    display: inline-block;
+    width: 32%;
+    margin-right: 2%;
+}
+
+.customize-control-radio-image {
+    display: none;
+}
+#customize-control-newsup_content_layout, .customize-control input[type=radio] {display: none;}
+#customize-control-newsup_content_layout img, #customize-control-newsup_single_page_layout img{width:85px;}
+
+li.customize-control-section-title {
+    background-color: #ffffff;
+    margin-top: 15px;
+    border-bottom: 1px solid #ddd;
+    border-left: 4px solid #00a0d2;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+input#_customize-input-newsup_date_time_show_type-radio-newsup_default, 
+input#_customize-input-newsup_date_time_show_type-radio-wordpress_date_setting, 
+input#_customize-input-post_image_type-radio-newsup_post_img_hei, 
+input#_customize-input-post_image_type-radio-newsup_post_img_acc  {
+    display: inline-block;
+}

@@ -1,0 +1,33 @@
+/*
+Theme Name: Newsberg
+Theme URI: https://themeansar.com/free-themes/newsberg/
+Author: Themeansar
+Author URI: https://themeansar.com
+Description: Newsberg is a fast, clean, modern-looking Best Responsive News Magazine WordPress theme. The theme is fully widgetized, so users can manage the content by using easy to use widgets. Newsberg is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. Newsberg is SEO friendly, WPML,Gutenberg, translation and RTL ready. Live preview : https://demo.themeansar.com/newsup and documentation at https://docs.themeansar.com/docs/newsup/
+Version: 0.9
+Requires PHP: 5.4
+Tested up to: 5.4.2
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: newsup
+Text Domain: newsberg
+Tags: blog, portfolio, news, grid-Layout, one-column, two-columns, three-columns, flexible-header, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, post-formats, rtl-language-support, theme-options, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks
+
+Newsberg WordPress Theme is child theme of Newsup, Copyright 2020 Themeansar
+Newsberg is distributed under the terms of the GNU General Public License v3
+
+Newsberg is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+@media screen and (max-width: 767px) and (min-width: 240px) {
+.mg-headwidget .navbar-wp .navbar-nav > li> a {
+    position: relative;
+    border-bottom: 1px solid rgba(225,225,225,0.4);
+}
+}
+@media (max-width: 991px) {
+	.navbar-wp .navbar-nav > li> a i {
+    	display: none;
+	}	
+}

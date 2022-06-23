@@ -1,0 +1,455 @@
+body.dce-dual-view{
+  
+}
+html.no-scroll{
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.dce-dualView ol, .dce-dualView ul, .cd-quick-view ol, .cd-quick-view ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+.dce-dualView *::after, .dce-dualView *::before, .cd-quick-view *::after, .cd-quick-view *::before {
+  content: '';
+}
+body.dce-dual-view:after {
+  content: '';
+  /* dark overlay layer - visible when we fire .cd-quick-view */
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFF; /*#12a19a;*/ /*rgba(71, 55, 78, 0.8);*/
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .6s 0s, visibility 0s .6s;
+  -moz-transition: opacity .6s 0s, visibility 0s .6s;
+  transition: opacity .6s 0s, visibility 0s .6s;
+}
+/*@media only screen and (min-width: 1024px) {*/
+body.dce-dual-view.overlay-layer:after {
+  visibility: visible;
+  opacity: 1;
+
+  -webkit-transition: opacity .6s 0s, visibility 0s 0s;
+  -moz-transition: opacity .6s 0s, visibility 0s 0s;
+  transition: opacity .6s 0s, visibility 0s 0s;
+}
+/*}*/
+
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.dce-dualView .cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  
+  /* La griglie si adatta al suo contenitore */
+  /*width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;*/
+}
+.dce-dualView .cd-container:after {
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------- 
+        Main components 
+-------------------------------- */
+.dce-dualView .cd-items {
+  /*padding: 1em 0;*/
+}
+
+.dce-dualView .cd-item {
+  position: relative;
+  margin: 0 0 1em;
+}
+.dce-dualView .cd-item > img {
+  display: block;
+  width: 100%;
+}
+
+
+.dce-dualView .cd-item.empty-box:after {
+    /* box visible as placeholder when the .cd-quick-view zooms in */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #392c3f;
+  }
+.dce-dualView .cd-trigger {
+  position: absolute;
+  height: 100%;
+  line-height: 50px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  
+  text-indent: -9999999px;
+  background: rgba(0, 0, 0, 0);
+
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+  opacity: 0;
+  /*visibility: hidden;*/
+
+  -webkit-transition: opacity 0.2s, background-color 0.2s;
+  -moz-transition: opacity 0.2s, background-color 0.2s;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+/*.no-touch */.dce-dualView .cd-trigger:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.dce-dualView .cd-trigger {
+    opacity: 1;
+}
+
+/*@media only screen and (min-width: 1024px) {*/
+  .cd-quick-view {
+    display: block;
+    position: fixed;
+    max-width: 100%;
+    visibility: hidden;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: left, top, width;
+    z-index: 1001;
+  }
+  .cd-quick-view:after {
+    display: table;
+    clear: both;
+  }
+  .cd-quick-view.is-visible {
+    /* class added when user clicks on .cd-trigger */
+    visibility: visible;
+  }
+  .cd-quick-view.animate-width {
+    /* class added at the end of the first zoom-in animation */
+    background-color: #ffffff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    -webkit-transition: box-shadow 0.3s;
+    -moz-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+  }
+/*}*/
+
+
+/* ---------------------------------- 
+                QUICK VIEW
+  ---------------------------------- */
+.cd-quick-view.add-content{
+  /*height: 100vh;
+  width: 100vw;
+  overflow-y: auto;*/
+}
+.cd-quick-view .cd-slider-wrapper {
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+.cd-quick-view .cd-slider-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-quick-view .cd-slider {
+  float: left;
+}
+.cd-quick-view .cd-slider li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+
+.cd-quick-view .cd-slider li.selected {
+  position: relative;
+  z-index: 3;
+}
+.dce-dualView .add-content .cd-slider {
+  margin-right: 3em;
+}
+.cd-quick-view .cd-slider li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 992px) {
+    .cd-quick-view .cd-slider li img {
+      max-width: 50vw;
+    }
+}
+
+
+
+/* Navigation */
+.cd-quick-view .cd-slider-navigation {
+  opacity: 0;
+}
+.cd-quick-view.add-content .cd-slider-navigation {
+  opacity: 1;
+}
+
+.cd-quick-view .cd-slider-navigation li {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 3;
+}
+.cd-quick-view .cd-slider-navigation li:first-child {
+  left: 0;
+}
+.cd-quick-view .cd-slider-navigation li:last-child {
+  /* equal to the .cd-slider-wrapper margin-right */
+  right: 3em;
+}
+.cd-quick-view .cd-slider-navigation li a {
+  display: block;
+  width: 40px;
+  height: 50px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  opacity: 0;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: opacity 0.2s, background 0.2s;
+  -moz-transition: opacity 0.2s, background 0.2s;
+  transition: opacity 0.2s, background 0.2s;
+}
+.cd-quick-view .cd-slider-navigation li a:before, .cd-quick-view .cd-slider-navigation li a:after {
+  /* create arrows in CSS */
+  position: absolute;
+  top: 18px;
+  left: 14px;
+  display: inline-block;
+  background: #ffffff;
+  height: 3px;
+  width: 12px;
+}
+.cd-quick-view .cd-slider-navigation li a:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.cd-quick-view .cd-slider-navigation li a:after {
+  -webkit-transform: translateY(7px) rotate(-45deg);
+  -moz-transform: translateY(7px) rotate(-45deg);
+  -ms-transform: translateY(7px) rotate(-45deg);
+  -o-transform: translateY(7px) rotate(-45deg);
+  transform: translateY(7px) rotate(-45deg);
+}
+.cd-quick-view.add-content .cd-slider-navigation li a {
+  opacity: .2;
+}
+.no-touch .dce-dualView .cd-slider-navigation li a:hover {
+  background: rgba(71, 55, 78, 0.8);
+  opacity: 1;
+}
+.cd-quick-view .cd-slider-navigation li a {
+  opacity: 1;
+}
+.cd-quick-view .cd-slider-navigation li:first-child a:before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.cd-quick-view .cd-slider-navigation li:first-child a:after {
+  -webkit-transform: translateY(7px) rotate(45deg);
+  -moz-transform: translateY(7px) rotate(45deg);
+  -ms-transform: translateY(7px) rotate(45deg);
+  -o-transform: translateY(7px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
+}
+
+
+
+
+
+
+.cd-quick-view .cd-item-info {
+  position: absolute;
+  padding: 3em 3em 3em 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s, visibility 0s;
+  -moz-transition: opacity .3s, visibility 0s;
+  transition: opacity .3s, visibility 0s;
+}
+/*.cd-quick-view .cd-item-info h2 {
+  font-size: 28px;
+  font-size: 1.75rem;
+}
+.cd-quick-view .cd-item-info p {
+  line-height: 1.6;
+  margin: 1em 0;
+  color: #67919c;
+}*/
+.cd-quick-view .cd-item-info .cd-item-action li {
+  display: inline-block;
+  margin-right: 1em;
+}
+.cd-quick-view .cd-item-info .cd-item-action li:first-child {
+  margin-left: -4px;
+}
+
+.cd-quick-view.add-content .cd-item-info {
+  /* class added at the end of the width animation, used to show the content */
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+}
+.cd-quick-view.add-content .cd-item-info {
+  -webkit-animation: cd-slide-in 0.3s;
+  -moz-animation: cd-slide-in 0.3s;
+  animation: cd-slide-in 0.3s;
+}
+/*.cd-quick-view.add-content .cd-item-info p {
+  -webkit-animation: cd-slide-in 0.4s;
+  -moz-animation: cd-slide-in 0.4s;
+  animation: cd-slide-in 0.4s;
+}
+.cd-quick-view.add-content .cd-item-info .cd-item-action {
+  -webkit-animation: cd-slide-in 0.5s;
+  -moz-animation: cd-slide-in 0.5s;
+  animation: cd-slide-in 0.5s;
+}*/
+
+@-webkit-keyframes cd-slide-in {
+  0% {
+    -webkit-transform: translate3d(40px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@-moz-keyframes cd-slide-in {
+  0% {
+    -moz-transform: translate3d(40px, 0, 0);
+  }
+  100% {
+    -moz-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes cd-slide-in {
+  0% {
+    -webkit-transform: translate3d(40px, 0, 0);
+    -moz-transform: translate3d(40px, 0, 0);
+    -ms-transform: translate3d(40px, 0, 0);
+    -o-transform: translate3d(40px, 0, 0);
+    transform: translate3d(40px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.cd-quick-view .cd-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform .3s 0s, visibility 0s .3s;
+  -moz-transition: -moz-transform .3s 0s, visibility 0s .3s;
+  transition: transform .3s 0s, visibility 0s .3s;
+}
+.cd-quick-view .cd-close:before, .cd-quick-view .cd-close:after {
+  content: '';
+  /* close icon in css */
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  display: inline-block;
+  height: 4px;
+  width: 20px;
+  background: #47374e;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.cd-quick-view .cd-close:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.cd-quick-view .cd-close:after {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.cd-quick-view .cd-close:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.cd-quick-view.add-content .cd-close {
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform .3s 0s, visibility 0s 0s;
+  -moz-transition: -moz-transform .3s 0s, visibility 0s 0s;
+  transition: transform .3s 0s, visibility 0s 0s;
+}

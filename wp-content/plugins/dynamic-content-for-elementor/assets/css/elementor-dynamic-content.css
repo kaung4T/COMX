@@ -1,0 +1,122 @@
+.float{
+	float: left !important;
+}
+.entry-share.element-lnk.sharing-align-center ul li a{
+    
+}
+.entry-share.element-lnk.sharing-align-center{
+    text-align: center;
+}
+.entry-share.element-lnk.sharing-align-left{
+    text-align: left;
+}
+.entry-share.element-lnk.sharing-align-right{
+    text-align: right;
+}
+.entry-share.element-lnk.sharing-align ul{
+    float: none;
+}
+.entry-share.element-lnk.sharing-align ul li{
+    float: none;
+    display: inline-block;
+}
+.entry-share.element-lnk.sharing-align .social-share-title{
+    float: none;
+    margin: 0;
+    line-height: 1.2;
+    padding-bottom: 12px;
+}
+.single .entry-share.element-lnk {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 0px solid #000;
+}
+.single nav.post-navigation {
+    margin: 0;
+    padding: 15px;
+    border-top: 1px solid #f1f1f1;
+    background-color: #fff;
+    z-index: 10;
+    position: relative;
+}
+
+
+
+/* Menu Parent child */
+.menu-parent-child-center{
+    text-align: center;
+}
+.menu-parent-child-left{
+    text-align: left;
+}
+.menu-parent-child-right{
+    text-align: right;
+}
+
+/* Dynamic */
+.dynamic-content-featuredimage-img img{
+    width: auto;
+}
+/* Masonry */
+.masonry-grid > div{
+    width: 50%;
+    margin: 0;
+    padding: 5px 5px 0 5px;
+}
+.masonry-grid a{
+    margin: 0;
+}
+@media only screen and (max-width: 768px) {
+    .masonry-grid > div{
+        width: 50%;
+        margin: 0;
+    }
+}
+.grid-item .gallery-lightbox{
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.grid-item .gallery-lightbox img{
+    transition: 0.8s transform ease;
+}
+.grid-item .gallery-lightbox::after{
+    transition: 0.8s opacity ease;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+}
+.grid-item .gallery-lightbox:hover img{
+    transform: scale(1.2);
+}
+.grid-item .gallery-lightbox:hover::after{
+    opacity: 1;
+}
+/* Next Prev */
+.elementor-widget-post-nextprev .nav-links::after{
+    content: "";
+    clear: both;
+}
+.elementor-widget-post-nextprev .nav-links .nav-previous{
+    float: left;
+}
+.elementor-widget-post-nextprev .nav-links .nav-next,
+
+.elementor-widget-post-nextprev .nav-links .nav-next .fa{
+   float: right;
+}
+.elementor-widget-post-nextprev .nav-links .fa{
+    padding: 0 10px;
+    position: relative;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+
+

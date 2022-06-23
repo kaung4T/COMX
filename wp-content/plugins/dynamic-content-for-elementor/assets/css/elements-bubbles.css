@@ -1,0 +1,251 @@
+.elementor-widget-dyncontel-bubbles{
+
+}
+.dce-container-bubbles span{
+  color: #000;
+}
+.dce-container-bubbles {
+  
+  background-blend-mode: multiply;
+/*overflow: hidden;*/
+}
+.indicatore-yes .bubble,
+.indicatore-yes .bubbles-container{
+  border: #ff0000 solid 1px;
+}
+.bubbles-container {
+  /*
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 15rem;
+  transform: translateX(-50%);
+  opacity: 1;
+  bottom: 0;
+}
+.bubbles {
+  /*width: 100%;
+  height: auto;
+  overflow: hidden;*/
+
+ /* position: absolute;
+  bottom: 0;
+  left: 0;*/
+}
+.bubbles circle {
+  stroke: white;
+  fill: none;
+}
+.bubbles > g > g:nth-of-type(3n) circle {
+  stroke: #87f5fb;
+}
+.bubbles > g > g:nth-of-type(4n) circle {
+  stroke: #8be8cb;
+}
+.bubbles-large {
+  overflow: visible;
+}
+.bubbles-large > g {
+  transform: translateY(2048px);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.bubbles-large g:nth-of-type(1) {
+  animation: up_bubble 6.5s infinite;
+}
+.bubbles-large g:nth-of-type(1) g {
+  transform: translateX(350px);
+}
+.bubbles-large g:nth-of-type(1) circle {
+  animation: wobble_bubble 3s infinite ease-in-out;
+}
+.bubbles-large g:nth-of-type(2) {
+  animation: up_bubble 5.25s 250ms infinite;
+}
+.bubbles-large g:nth-of-type(2) g {
+  transform: translateX(450px);
+}
+.bubbles-large g:nth-of-type(2) circle {
+  animation: wobble_bubble 3s infinite ease-in-out;
+}
+.bubbles-large g:nth-of-type(3) {
+  animation: up_bubble 6s 750ms infinite;
+}
+.bubbles-large g:nth-of-type(3) g {
+  transform: translateX(700px);
+}
+.bubbles-large g:nth-of-type(3) circle {
+  animation: wobble_bubble 3s infinite ease-in-out;
+}
+.bubbles-large g:nth-of-type(4) {
+  animation: up_bubble 5.5s 1.5s infinite;
+}
+.bubbles-large g:nth-of-type(4) g {
+  transform: translateX(500px);
+}
+.bubbles-large g:nth-of-type(4) circle {
+  animation: wobble_bubble 3s infinite ease-in-out;
+}
+.bubbles-large g:nth-of-type(5) {
+  animation: up_bubble 6.5s 4s infinite;
+}
+.bubbles-large g:nth-of-type(5) g {
+  transform: translateX(675px);
+}
+.bubbles-large g:nth-of-type(5) circle {
+  animation: wobble_bubble 3s infinite ease-in-out;
+}
+.bubbles-small {
+  overflow: visible;
+}
+.bubbles-small > g {
+  transform: translateY(2048px);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.bubbles-small g circle {
+  transform: scale(0);
+}
+.bubbles-small g:nth-of-type(1) {
+  animation: up_bubble 5.25s infinite;
+}
+.bubbles-small g:nth-of-type(1) g {
+  transform: translateX(350px);
+}
+.bubbles-small g:nth-of-type(1) circle {
+  animation: wobble_bubble 3s infinite ease-in-out;
+}
+.bubbles-small g:nth-of-type(2) {
+  animation: up_bubble 5.75s infinite;
+}
+.bubbles-small g:nth-of-type(2) g {
+  transform: translateX(750px);
+}
+.bubbles-small g:nth-of-type(2) circle {
+  animation: wobble_bubble 3s infinite ease-in-out;
+}
+.bubbles-small g:nth-of-type(3) {
+  animation: up_bubble 5.25s 250ms infinite;
+}
+.bubbles-small g:nth-of-type(3) g {
+  transform: translateX(350px);
+}
+.bubbles-small g:nth-of-type(3) circle {
+  animation: wobble_bubble 3s 250ms infinite ease-in-out;
+}
+.bubbles-small g:nth-of-type(4) {
+  animation: up_bubble 5.75s 325ms infinite;
+}
+.bubbles-small g:nth-of-type(4) g {
+  transform: translateX(180px);
+}
+.bubbles-small g:nth-of-type(4) circle {
+  animation: wobble_bubble 3s 325ms infinite ease-in-out;
+}
+.bubbles-small g:nth-of-type(5) {
+  animation: up_bubble 6s 125ms infinite;
+}
+.bubbles-small g:nth-of-type(5) g {
+  transform: translateX(350px);
+}
+.bubbles-small g:nth-of-type(5) circle {
+  animation: wobble_bubble 3s 250ms infinite ease-in-out;
+}
+.bubbles-small g:nth-of-type(6) {
+  animation: up_bubble 5.13s 250ms infinite;
+}
+.bubbles-small g:nth-of-type(6) g {
+  transform: translateX(650px);
+}
+.bubbles-small g:nth-of-type(6) circle {
+  animation: wobble_bubble 3s 125ms infinite ease-in-out;
+}
+.bubbles-small g:nth-of-type(7) {
+  animation: up_bubble 6.25s 350ms infinite;
+}
+.bubbles-small g:nth-of-type(7) g {
+  transform: translateX(480px);
+}
+.bubbles-small g:nth-of-type(7) circle {
+  animation: wobble_bubble 3s 325ms infinite ease-in-out;
+}
+.bubbles-small g:nth-of-type(8) {
+  animation: up_bubble 7s 200ms infinite;
+}
+.bubbles-small g:nth-of-type(8) g {
+  transform: translateX(330px);
+}
+.bubbles-small g:nth-of-type(8) circle {
+  animation: wobble_bubble 3s 325ms infinite ease-in-out;
+}
+.bubbles-small g:nth-of-type(9) {
+  animation: up_bubble 6.25s 233ms infinite;
+}
+.bubbles-small g:nth-of-type(9) g {
+  transform: translateX(230px);
+}
+.bubbles-small g:nth-of-type(9) circle {
+  animation: wobble_bubble 3s 275ms infinite ease-in-out;
+}
+.bubbles-small g:nth-of-type(10) {
+  animation: up_bubble 6s 900ms infinite;
+}
+.bubbles-small g:nth-of-type(10) g {
+  transform: translateX(730px);
+}
+.bubbles-small g:nth-of-type(10) circle {
+  animation: wobble_bubble 2s 905ms infinite ease-in-out;
+}
+@keyframes wobble_bubble {
+  33% {
+    transform: translateX(-10%);
+  }
+  66% {
+    transform: translateX(10%);
+  }
+}
+@keyframes up_bubbleshort {
+  0% {
+    opacity: 0;
+
+  }
+  10%, 80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50vh);
+  }
+}
+@keyframes up_bubble {
+  0% {
+    opacity: 0;
+
+  }
+  10%, 80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+}@keyframes up_bubblelong {
+  0% {
+    opacity: 0;
+
+  }
+  10%, 80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-200vh);
+  }
+}

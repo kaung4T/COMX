@@ -1,0 +1,25 @@
+{
+  "name": "awps-font-awesome-php",
+  "version": "4.7.0",
+  "description": "A PHP library for Font Awesome.",
+  "main": "scr/load.php",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awps/font-awesome-php.git"
+  },
+  "author": "Andrei Surdu",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/awps/font-awesome-php/issues"
+  },
+  "homepage": "https://github.com/awps/font-awesome-php#readme",
+  "devDependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}

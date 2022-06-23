@@ -1,0 +1,185 @@
+
+/* --------- CRESCI ---------- */
+@keyframes cresci {
+  0% { transform: scale( 0 ); }
+  100% { transform: scale( 1 ); }
+}
+
+
+/* --------- DONDOLA ---------- */
+@keyframes dondolashort {
+  0% { transform: rotate( -5deg ); }
+  100% { transform: rotate( 5deg ); }
+}
+@keyframes dondola {
+  0% { transform: rotate( -25deg ); }
+  100% { transform: rotate( 25deg ); }
+}
+@keyframes dondolalong {
+  0% { transform: rotate( -45deg ); }
+  100% { transform: rotate( 45deg ); }
+}
+
+/* --------- PULSA ---------- */
+@keyframes pulsashort {
+  0% { transform: scale( 0.98 ); }
+  100% { transform: scale( 1.02 ); }
+}
+@keyframes pulsa {
+  0% { transform: scale( 0.93 ); }
+  100% { transform: scale( 1.07 ); }
+}
+@keyframes pulsalong {
+  0% { transform: scale( 0.85 ); }
+  100% { transform: scale( 1.15 ); }
+}
+
+/* --------- DONDOLA ---------- */
+@keyframes dondolashort {
+  0% { transform: rotate( -5deg ); }
+  100% { transform: rotate( 5deg ); }
+}
+@keyframes dondola {
+  0% { transform: rotate( -25deg ); }
+  100% { transform: rotate( 25deg ); }
+}
+@keyframes dondolalong {
+  0% { transform: rotate( -45deg ); }
+  100% { transform: rotate( 45deg ); }
+}
+
+/* --------- RUNS ---------- */
+@keyframes girashort {
+  0% { transform: rotate( 0deg ); }
+  100% { transform: rotate( 360deg ); }
+}
+@keyframes gira {
+  0% { transform: rotate( 0deg ); }
+  100% { transform: rotate( 360deg ); }
+}
+@keyframes giralong {
+  0% { transform: rotate( 0deg ); }
+  100% { transform: rotate( 360deg ); }
+}
+/* --------- GALLEGGIA ---------- */
+@keyframes galleggiashort {
+    0% { transform: translateY( -5% ); }
+  100% { transform: translateY( 5% ); }
+}
+@keyframes galleggia {
+    0% { transform: translateY( -12% ); }
+  100% { transform: translateY( 12% ); }
+}
+@keyframes galleggialong {
+    0% { transform: translateY( -25% ); }
+  100% { transform: translateY( 25% ); }
+}
+
+
+/* --------- ATTRAVERSA ---------- */
+@keyframes attraversa {
+    0% { transform: translateX( calc( -50vw - 50% - 100px ) ); }
+  100% { transform: translateX( calc( +50vw + 50% + 100px ) ); }
+}
+
+
+/* --------- RISALI o AFFONDA ---------- */
+/*@keyframes risali-e-affonda {
+    0% { transform: translateY( calc( -50vw - 50% - 50px ) ); }
+  100% { transform: translateY( calc( +50vw + 50% + 50px ) ); }
+}*/
+@keyframes risali-o-affondashort {
+    0% { transform: translateY( 70% ); }
+  100% { transform: translateY( 0 ); }
+}
+@keyframes risali-o-affonda {
+    0% { transform: translateY( 150% ); }
+  100% { transform: translateY( 0 ); }
+}
+@keyframes risali-o-affondalong {
+    0% { transform: translateY( 300% ); }
+  100% { transform: translateY( 0 ); }
+}
+
+
+/* --------- RIMBALZA ---------- */
+@keyframes saltellashort {
+  0% {transform: translateY(0%);}
+  20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-15px);}
+    60% {transform: translateY(-7px);}
+}
+@keyframes saltella {
+  0% {transform: translateY(0%);}
+  20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+@keyframes saltellalong {
+  0% {transform: translateY(0%);}
+  20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-60px);}
+    60% {transform: translateY(-30px);}
+}
+
+
+/* --------- ROTOLA ---------- */
+@keyframes rotolashort {
+    0% { transform: translateX( calc( -50vw - 50% - 50px ) ) rotate( -90deg ); }
+  100% { transform: translateX( calc( +50vw + 50% + 50px ) )  rotate( 90deg ); }
+}
+@keyframes rotola {
+    0% { transform: translateX( calc( -50vw - 50% - 50px ) ) rotate( -270deg ); }
+  100% { transform: translateX( calc( +50vw + 50% + 50px ) )  rotate( 270deg ); }
+}
+@keyframes rotolalong {
+    0% { transform: translateX( calc( -50vw - 50% - 50px ) ) rotate( -450deg ); }
+  100% { transform: translateX( calc( +50vw + 50% + 50px ) )  rotate( 450deg ); }
+}
+
+
+
+/* --------- BRILLA ---------- */
+@keyframes brillashort {
+  0% { box-shadow: 0 0 -10px rgba(232,189,109,0.88); }
+  50% { box-shadow: 0 0 50px rgba(232,189,109,0.88); }
+  100% { box-shadow: 0 0 100px rgba(232,189,109,0); }
+}
+@keyframes brilla {
+  0% { box-shadow: 0 0 -10px rgba(232,189,109,0.88); }
+  50% { box-shadow: 0 0 200px rgba(232,189,109,0.88); }
+  100% { box-shadow: 0 0 300px rgba(232,189,109,0); }
+}
+@keyframes brillalong {
+  0% { box-shadow: 0 0 -10px rgba(232,189,109,0.88); }
+  50% { box-shadow: 0 0 300px rgba(232,189,109,0.88); }
+  100% { box-shadow: 0 0 700px rgba(232,189,109,0); }
+}
+
+
+
+/*@-webkit-keyframes pulsa {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}*/
+@keyframes brilla1 {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}

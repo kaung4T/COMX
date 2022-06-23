@@ -1,0 +1,50 @@
+/*
+Theme Name: Starter
+Author: Zayd Dawood
+Author URI: http://uogs.co.uk
+Description: Demo site for testing features on WordPress
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: uogs
+*/
+
+body {
+  background-color: #FFF;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Varela Round", sans-serif;
+}
+
+h2 {
+  margin:  2rem 0 1rem;
+}
+
+a {
+  color: #564A71;
+  text-decoration: none;
+}
+
+pre {
+  background: #222;
+  padding: 10px;
+  border: 1px #777 solid;
+  color: #EDEDED;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+#masthead {
+  margin: 2rem 0 1rem;
+  text-align: center;
+}
+
+#content {
+  background: #FFF;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 5px;
+}

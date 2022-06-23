@@ -1,0 +1,63 @@
+.dce_distortion{
+    
+}
+.elementor-widget-dyncontel-distortion{
+    position: static;
+}
+.dce_distortion .grid__item {
+    /*position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100vw;*/
+}
+.dce_distortion .grid__item--bg {
+    /*height: 100vw;*/
+}
+.dce_distortion .grid__item {
+    /*height: 50vmax;
+    width: 100%;*/
+}
+.dce_distortion .grid__item-img {
+    /*display: block;
+    height: 100%;
+    width: 100%;*/
+    position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+}
+.dce_distortion .grid__item-img canvas {
+    position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+}
+.dce_distortion .grid__item-img img {
+    height: auto;
+    width: 100%;
+    display: none;
+}
+/*.dce_distortion .grid__item-img img {
+    display: none;
+}*/
+.dce_distortion .grid__item-img img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.dce_distortion .grid__item:hover .grid__item-img img:nth-child(2) {
+    opacity: 1;
+}
+
+.dce_distortion .grid__item-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: 2rem 0 0 0;
+    color: var(--item-title);
+}

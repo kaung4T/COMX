@@ -1,0 +1,70 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 10-lug-2018, 10.46.27
+    Author     : fra
+*/
+
+.dce-visibility-warning {
+    background-color: #e52600;
+    color: white;
+    text-align: center;
+}
+/* Visibility */
+.dce-visibility-hidden{
+    /*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAFUlEQVQYlWNgoAZ4qsbwnzIFw8IKAPtnDD01C/HRAAAAAElFTkSuQmCC) repeat;*/
+}
+/*.dce-visibility-hidden > * {
+    opacity: 0.6;
+}*/
+.dce-visibility-section-hidden,
+.dce-visibility-hidden {
+    outline: 1px dashed #e52600 !important;
+    outline-offset: -1px;
+    opacity: 0.6;
+    transition: 0.4s;
+}
+.dce-visibility-hidden.dce-visibility-no-opacity,
+.dce-visibility-section-hidden:hover,
+.dce-visibility-hidden:hover {
+    opacity: 1;
+}
+
+.elementor-dce-visibility {
+    background-color: rgb(229, 38, 0);
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 10;
+}
+.elementor-dce-visibility ul {
+    line-height: 1;
+    list-style: none;
+    margin: 0;
+}
+
+/*
+///////////////////////////////////////////////////////////////
+*/
+
+.dce-edit-template{
+    position: absolute;
+    z-index: 100;
+    top: 100px;
+    left: 50%;
+
+    padding: 10px 20px;
+
+    background-color: #000;
+    color: #fff;
+
+    transform: translateX(-50%);
+}
+.dce-edit-template .fa {
+    margin-right: 8px;
+}
